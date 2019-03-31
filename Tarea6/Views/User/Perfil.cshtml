@@ -1,0 +1,42 @@
+﻿@model Tarea6.Models.User
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="text-info" align="center"> DATOS</h3>
+            </div>
+            <div class="card">
+                <div class="card-body" align="center">
+                    <h4 class="text-info"> Cédula:</h4>
+                    <h5 class="text-second"> @Model.Cedula</h5>
+                    <h4 class="text-info"> Nombre:</h4>
+                    <h5 class="text-second"> @Model.Nombre</h5>
+                    <h4 class="text-info"> Apellido:</h4>
+                    <h5 class="text-second"> @Model.Apellido</h5>
+                    <h4 class="text-info"> Edad:</h4>
+                    <h5 class="text-second"> @Model.Edad</h5>
+                    <h4 class="text-info"> Teléfono:</h4>
+                    <h5 class="text-ssecond"> @Model.Telefono</h5>
+                    <h4 class="text-info"> Correo Electronico:</h4>
+                    <h5 class="text-second"> @Model.Correo</h5>
+                    <h4 class="text-info"> Género:</h4>
+                    <h5 class="text-second"> @Model.Genero</h5>
+                    <h4 class="text-info"> Estado Civil:</h4>
+                    <h5 class="text-second"> @Model.EstadoCivil</h5>
+                    <h4 class="text-info"> Hobbys:</h4>
+                    <h5 class="text-second">
+                        @for (var x = 0; x < Model.Hobbys.Length; x++)
+                        {
+                            if (@Model.Hobbys[x] != "false")
+                            {
+                                @Model.Hobbys[x]
+                                <span> </span>
+                            }
+                        }
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
